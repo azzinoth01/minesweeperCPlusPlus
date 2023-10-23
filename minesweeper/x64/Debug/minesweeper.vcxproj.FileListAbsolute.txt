@@ -1,0 +1,5 @@
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\x64\Debug\minesweeper.vcxproj.CopyComplete
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\x64\Debug\minesweeper.exe
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\x64\Debug\xapobaseredist.pdb
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\x64\Debug\xaudio2_9redist.pdb
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\x64\Debug\xaudio2_9redist.dll

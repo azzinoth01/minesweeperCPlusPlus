@@ -1,0 +1,68 @@
+﻿  compilation object save succeeded; see C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\x64\Debug\PixelShader.cso
+  compilation object save succeeded; see C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\x64\Debug\VertexShader.cso
+  Color.cpp
+  D3D11Buffer.cpp
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\D3D11Buffer.cpp(24,33): warning C4267: '=': conversion from 'size_t' to 'UINT', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\D3D11Buffer.cpp(55,33): warning C4267: '=': conversion from 'size_t' to 'UINT', possible loss of data
+  D3D11Device.cpp
+  D3D11Material.cpp
+  D3D11PixelShader.cpp
+  D3D11Renderer.cpp
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\D3D11Renderer.cpp(28,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\D3D11Renderer.cpp(29,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\D3D11Renderer.cpp(56,71): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\D3D11Renderer.cpp(57,72): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  D3D11SampleState.cpp
+  D3D11Texture2D.cpp
+  D3D11Vertex.cpp
+  D3D11VertexShader.cpp
+  Minesweeper.cpp
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(21,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(21,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(23,60): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(23,89): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(25,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(25,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(31,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(39,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(39,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(86,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(86,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(96,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Minesweeper.cpp(96,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SpriteRenderer.cpp
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\SpriteRenderer.cpp(70,37): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  main.cpp
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\main.cpp(95,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\main.cpp(95,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\main.cpp(115,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\main.cpp(115,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Tile.cpp
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Tile.cpp(98,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Tile.cpp(99,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Utility.cpp
+  Vector2Int.cpp
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Vector2Int.cpp(4,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Vector2Int.cpp(4,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Vector2Int.cpp(69,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Vector2Int.cpp(70,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Vector2Int.cpp(77,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Vector2Int.cpp(78,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Vector3.cpp
+  Generating Code...
+  minesweeper.vcxproj -> C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\x64\Debug\minesweeper.exe
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Reset.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile0.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile1.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile2.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile3.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile4.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile5.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile6.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile7.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\Tile8.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\TileClosed.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\TileFlag.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\TileMine.png
+  C:\Users\Markus\git\minesweeperCPlusPlus\minesweeper\Assets\TileMineFinish.png
+  14 Datei(en) kopiert
