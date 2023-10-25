@@ -2,18 +2,24 @@
 #include "D3D11Device.h"
 #include "Color.h"
 
-
-
-
 struct PerFrameConstantBufferData {
     float screenSize[2];
     float unused[2];
 } _perFrameConstantBufferData;
 
+D3D11Renderer* D3D11Renderer::_instance = nullptr;
+
 D3D11Renderer::D3D11Renderer() {
 }
 
 D3D11Renderer::~D3D11Renderer() {
+}
+
+D3D11Renderer* D3D11Renderer::GetInstance() {
+    if (_instance == nullptr) {
+        _instance = new D3D11Renderer();
+    }
+    return _instance;
 }
 
 bool D3D11Renderer::Init(HWND hwnd, int width, int height) {
@@ -44,7 +50,17 @@ bool D3D11Renderer::BeginRender() {
     D3D11Device::GetInstance()->ResetRenderTargets();
     D3D11Device::GetInstance()->ClearDSV(D3D11_CLEAR_DEPTH, 1.0f, 0);
 
-
+    auto it = _renderList.begin();
+    while (it != _renderList.end()) {
+      auto render=  it->lock();
+        if (render) {
+            render->BeginRender();
+            it++;
+        }
+        else {
+           it= _renderList.erase(it);
+        }
+    }
     return true;
 }
 
@@ -62,9 +78,35 @@ bool D3D11Renderer::Render() {
         return false;
     }
 
+    auto it = _renderList.begin();
+    while (it != _renderList.end()) {
+        auto render = it->lock();
+        if (render) {
+            render->Render();
+            it++;
+        }
+        else {
+            it = _renderList.erase(it);
+        }
+    }
     return true;
 }
 
 bool D3D11Renderer::EndRender() {
+    auto it = _renderList.begin();
+    while (it != _renderList.end()) {
+        auto render = it->lock();
+        if (render) {
+            render->EndRender();
+            it++;
+        }
+        else {
+            it = _renderList.erase(it);
+        }
+    }
     return D3D11Device::GetInstance()->Present(0);
+}
+
+void D3D11Renderer::AddRenderObject(std::weak_ptr<IRender> renderObject) {
+    _renderList.push_back(renderObject);
 }

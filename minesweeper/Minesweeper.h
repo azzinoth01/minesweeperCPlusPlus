@@ -14,7 +14,7 @@ public:
     Vector2Int GetSize();
     Tile* GetTile(Vector2Int position);
 
-    void PreRender();
+    void BeginRender();
     void Render();
     void Reset();
 

@@ -59,9 +59,9 @@ Tile* Minesweeper::GetTile(Vector2Int position) {
     return _mineField[position];
 }
 
-void Minesweeper::PreRender() {
+void Minesweeper::BeginRender() {
     for (const auto& tile : _mineField) {
-        tile.second->PreRender();
+        tile.second->BeginRender();
     }
 }
 

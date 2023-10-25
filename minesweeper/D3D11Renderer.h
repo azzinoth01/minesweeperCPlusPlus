@@ -6,13 +6,15 @@
 #include "ComPointer.h"
 #include "Utility.h"
 #include "SpriteRenderer.h"
-
+#include "IRender.h"
+#include <memory>
 
 class D3D11Renderer {
 
 public:
-    D3D11Renderer();
-    ~D3D11Renderer();
+    
+
+    static D3D11Renderer* GetInstance();
 
     bool Init(HWND hwnd, int width, int height);
     void OnSizeChange(int width, int height);
@@ -21,12 +23,18 @@ public:
     bool Render();
     bool EndRender();
 
+    void AddRenderObject(std::weak_ptr<IRender> renderObject);
+
 private:
     REMOVE_COPY_MOVE(D3D11Renderer);
 
+    D3D11Renderer();
+    ~D3D11Renderer();
+
+    static D3D11Renderer* _instance;
+
     D3D11Buffer _perFrameConstantBuffer;
-
-    SpriteRenderer spriteRender;
-
+    std::vector<std::weak_ptr<IRender>> _renderList;
+    
 };
 

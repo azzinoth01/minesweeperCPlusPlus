@@ -1,123 +1,177 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{a1a5f020-bbef-45df-9f43-2c8f7b5a78c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Header">
+      <UniqueIdentifier>{6841c87a-5dc5-4f0f-9d37-0205d2f7b88c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Source">
+      <UniqueIdentifier>{159ef4a9-6c8c-4d8f-afa0-d738884e14ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{154c0588-938b-4a29-862f-9ce26dd45399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Header">
+      <UniqueIdentifier>{48eca37c-7b40-4d2b-9180-70d4036b961c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Source">
+      <UniqueIdentifier>{9601cee0-37b1-4ef0-9583-ae74ca08a74f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntityComponentSystem">
+      <UniqueIdentifier>{bc5ea1b3-5acd-4721-a801-a9e05a9b6e4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntityComponentSystem\Header">
+      <UniqueIdentifier>{4a54360c-766c-46e9-9524-35c5374a4460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntityComponentSystem\Source">
+      <UniqueIdentifier>{52490ba1-a8ff-4030-9896-7a9fb27008a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minesweeper">
+      <UniqueIdentifier>{ca55de2e-dc3d-43dd-a9c9-e323ef17cea3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Minesweeper\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Minesweeper\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ComPointer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11Device.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Utility.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11Buffer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11Texture2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11PixelShader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11VertexShader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11Vertex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11Material.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteRenderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11SampleState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Minesweeper.h">
-      <Filter>Header Files</Filter>
+      <Filter>Minesweeper\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Tile.h">
-      <Filter>Header Files</Filter>
+      <Filter>Minesweeper\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Buffer.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Device.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Material.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11PixelShader.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Renderer.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11SampleState.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Texture2D.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Vertex.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11VertexShader.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Utility\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Utility\Header</Filter>
     </ClInclude>
     <ClInclude Include="Vector2Int.h">
-      <Filter>Header Files</Filter>
+      <Filter>Utility\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Utility\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>EntityComponentSystem\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>EntityComponentSystem\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteRenderer.h">
+      <Filter>EntityComponentSystem\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentType.h">
+      <Filter>EntityComponentSystem\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ComPointer.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="IRender.h">
+      <Filter>Rendering\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityContainer.h">
+      <Filter>Minesweeper\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11Device.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Utility.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11Buffer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11Texture2D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11PixelShader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11VertexShader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11Vertex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Color.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11Material.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SpriteRenderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11SampleState.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Minesweeper\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Minesweeper.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Minesweeper\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Tile.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Minesweeper\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Buffer.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Device.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Material.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Renderer.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11PixelShader.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11SampleState.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Texture2D.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Vertex.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11VertexShader.cpp">
+      <Filter>Rendering\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Utility\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Utility\Source</Filter>
     </ClCompile>
     <ClCompile Include="Vector2Int.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Utility\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Utility\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>EntityComponentSystem\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteRenderer.cpp">
+      <Filter>EntityComponentSystem\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Minesweeper\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityContainer.cpp">
+      <Filter>Minesweeper\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

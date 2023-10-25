@@ -122,8 +122,8 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR cmdLine, int 
             break;
         }
 
-        minesweeper.PreRender();
-        resetButton.PreRender();
+        minesweeper.BeginRender();
+        resetButton.BeginRender();
 
         if (!renderer->Render()) {
             break;

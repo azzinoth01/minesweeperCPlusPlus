@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClInclude Include="Color.h" />
     <ClInclude Include="ComPointer.h" />
+    <ClInclude Include="ComponentType.h" />
     <ClInclude Include="D3D11Buffer.h" />
     <ClInclude Include="D3D11Device.h" />
     <ClInclude Include="D3D11Material.h" />
@@ -148,6 +149,10 @@
     <ClInclude Include="D3D11Texture2D.h" />
     <ClInclude Include="D3D11Vertex.h" />
     <ClInclude Include="D3D11VertexShader.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="EntityContainer.h" />
+    <ClInclude Include="IRender.h" />
     <ClInclude Include="Minesweeper.h" />
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="Tile.h" />
@@ -157,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Component.cpp" />
     <ClCompile Include="D3D11Buffer.cpp" />
     <ClCompile Include="D3D11Device.cpp" />
     <ClCompile Include="D3D11Material.cpp" />
@@ -166,6 +172,8 @@
     <ClCompile Include="D3D11Texture2D.cpp" />
     <ClCompile Include="D3D11Vertex.cpp" />
     <ClCompile Include="D3D11VertexShader.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityContainer.cpp" />
     <ClCompile Include="Minesweeper.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
     <ClCompile Include="main.cpp" />

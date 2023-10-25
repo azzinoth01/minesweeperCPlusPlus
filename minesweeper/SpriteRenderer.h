@@ -5,17 +5,19 @@
 #include "D3D11Buffer.h"
 #include "D3D11Material.h"
 #include "D3D11SampleState.h"
+#include "IRender.h"
+#include "Component.h"
 
-class SpriteRenderer {
+class SpriteRenderer : public Component, public IRender {
 
 
 public:
     SpriteRenderer();
     ~SpriteRenderer();
 
-    void InitRender();
-    bool PreRender();
-    bool Render();
+    
+
+
 
     void SetMaterial(std::string& id);
     void SetMaterial(const std::string& vertexShaderFile, const std::string& pixelShaderFile);
@@ -44,5 +46,19 @@ private:
     std::string _textureID;
     bool _isChanged;
     bool _isInit;
+
+    // Inherited via Component
+    virtual void OnEnable() override;
+    virtual void OnDisable() override;
+    virtual void Start() override;
+    virtual void Update() override;
+    virtual void OnDestroy() override;
+    virtual ComponentType GetType() override;
+
+    // Inherited via IRender
+    virtual void Init() override;
+    virtual void BeginRender() override;
+    virtual void Render() override;
+    virtual void EndRender() override;
 };
 

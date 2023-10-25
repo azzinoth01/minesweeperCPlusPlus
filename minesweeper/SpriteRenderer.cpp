@@ -1,8 +1,6 @@
 #include "SpriteRenderer.h"
 #include "D3D11Device.h"
-
-
-
+#include "D3D11Renderer.h"
 
 SpriteRenderer::SpriteRenderer() : _position(Vector3(100, 100, 0)), _width(600), _height(600), _isChanged(false), _isInit(false) {
 
@@ -13,64 +11,6 @@ SpriteRenderer::SpriteRenderer() : _position(Vector3(100, 100, 0)), _width(600),
 SpriteRenderer::~SpriteRenderer() {
 }
 
-void SpriteRenderer::InitRender() {
-
-
-    if (!_vertexBuffer.CreateStatic(_vertices.data(), _vertices.size() * sizeof(VertexColoredTexture), D3D11_BIND_VERTEX_BUFFER)) {
-        _isInit = false;
-    }
-
-    _sampleState.Init(D3D11SampleState::ANISOTROPIC_FILTER, D3D11_TEXTURE_ADDRESS_CLAMP, D3D11_COMPARISON_ALWAYS, 4, 0, D3D11_FLOAT32_MAX, 0);
-
-    _isInit = true;
-}
-
-bool SpriteRenderer::PreRender() {
-    if (_isInit == false) {
-        return false;
-    }
-    if (_isChanged) {
-        _vertices.clear();
-        CreateVertices();
-        _vertexBuffer.Release();
-        if (!_vertexBuffer.CreateStatic(_vertices.data(), _vertices.size() * sizeof(VertexColoredTexture), D3D11_BIND_VERTEX_BUFFER)) {
-            return false;
-        }
-        _isChanged = false;
-    }
-
-
-
-    return true;
-}
-
-bool SpriteRenderer::Render() {
-    if (_isInit == false) {
-        return false;
-    }
-    ID3D11DeviceContext* contex = D3D11Device::GetContext();
-
-
-    D3D11Material* mat = D3D11Device::GetInstance()->GetMaterial(_materialID);
-    if (mat != nullptr) {
-        mat->SetupForRendering();
-    }
-    const UINT stride = sizeof(VertexColoredTexture);
-    constexpr UINT offset = 0;
-    ID3D11Buffer* vertexBuffer = _vertexBuffer.GetBuffer();
-    contex->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
-    contex->IASetVertexBuffers(0, 1, &vertexBuffer, &stride, &offset);
-
-    D3D11Texture2D* texture = D3D11Device::GetInstance()->GetTexture(_textureID);
-    if (texture != nullptr) {
-        texture->SetupForRendering(0);
-        _sampleState.SetupForRendering(0);
-    }
-
-    contex->Draw(_vertices.size(), 0);
-
-    return false;
-}
 
 void SpriteRenderer::SetMaterial(std::string& id) {
     _materialID = id;
@@ -136,4 +76,89 @@ void SpriteRenderer::CreateVertices() {
     _vertices.push_back({ botLeft.X , botLeft.Y , botLeft.Z , white.GetR(), white.GetG(), white.GetB(), white.GetA(), 0, 1 });
     _vertices.push_back({ topRight.X, topRight.Y, topRight.Z, white.GetR(), white.GetG(), white.GetB(), white.GetA(), 1, 0 });
     _vertices.push_back({ topLeft.X , topLeft.Y , topLeft.Z , white.GetR(), white.GetG(), white.GetB(), white.GetA(), 0, 0 });
+}
+
+void SpriteRenderer::OnEnable() {
+  //  D3D11Renderer::GetInstance()->AddRenderObject()
+}
+
+void SpriteRenderer::OnDisable() {
+}
+
+void SpriteRenderer::Start() {
+    Init();
+}
+
+void SpriteRenderer::Update() {
+}
+
+void SpriteRenderer::OnDestroy() {
+}
+
+ComponentType SpriteRenderer::GetType() {
+    return ComponentType();
+}
+void SpriteRenderer::Init() {
+
+
+    if (!_vertexBuffer.CreateStatic(_vertices.data(), _vertices.size() * sizeof(VertexColoredTexture), D3D11_BIND_VERTEX_BUFFER)) {
+        _isInit = false;
+    }
+
+    _sampleState.Init(D3D11SampleState::ANISOTROPIC_FILTER, D3D11_TEXTURE_ADDRESS_CLAMP, D3D11_COMPARISON_ALWAYS, 4, 0, D3D11_FLOAT32_MAX, 0);
+
+    _isInit = true;
+}
+
+void SpriteRenderer::BeginRender() {
+}
+
+void SpriteRenderer::Render() {
+}
+
+void SpriteRenderer::EndRender() {
+}
+
+void SpriteRenderer::BeginRender() {
+    if (_isInit == false) {
+        return;
+    }
+    if (_isChanged) {
+        _vertices.clear();
+        CreateVertices();
+        _vertexBuffer.Release();
+        if (!_vertexBuffer.CreateStatic(_vertices.data(), _vertices.size() * sizeof(VertexColoredTexture), D3D11_BIND_VERTEX_BUFFER)) {
+            return;
+        }
+        _isChanged = false;
+    }
+}
+
+void SpriteRenderer::Render() {
+    if (_isInit == false && _isChanged == true) {
+        return;
+    }
+    ID3D11DeviceContext* contex = D3D11Device::GetContext();
+
+
+    D3D11Material* mat = D3D11Device::GetInstance()->GetMaterial(_materialID);
+    if (mat != nullptr) {
+        mat->SetupForRendering();
+    }
+    const UINT stride = sizeof(VertexColoredTexture);
+    constexpr UINT offset = 0;
+    ID3D11Buffer* vertexBuffer = _vertexBuffer.GetBuffer();
+    contex->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
+    contex->IASetVertexBuffers(0, 1, &vertexBuffer, &stride, &offset);
+
+    D3D11Texture2D* texture = D3D11Device::GetInstance()->GetTexture(_textureID);
+    if (texture != nullptr) {
+        texture->SetupForRendering(0);
+        _sampleState.SetupForRendering(0);
+    }
+
+    contex->Draw(_vertices.size(), 0);
+}
+
+void SpriteRenderer::EndRender() {
 }
